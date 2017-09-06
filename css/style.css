@@ -1,0 +1,146 @@
+/* MAIN */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+#shapeSvg{
+    width:200px;
+    height: 100px;
+}
+
+#shape1 {
+  width: 283px;
+  height: 283px;
+  background-color: #39cccc;
+  background-size: cover;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+  position: absolute;
+  left: 107px;
+  top: -92px;
+  transform: rotate(45deg);
+  transform-origin: 75% 25%;
+}
+
+/*#shape2 {
+  width: 0px;
+  height: 0px;
+  border-left: 200px solid transparent;
+  border-right: 200px solid transparent;
+
+  border-top: 200px solid #2EADD0;
+  position: absolute;
+  left: 50px;
+  top: 50px;
+}*/
+
+#shape3 {
+  /*width: 0px;
+  height: 0px;
+  border-top: 100px solid transparent;
+  border-bottom: 100px solid transparent;
+
+  border-left: 100px solid #797D28;
+  position: absolute;
+  left: 150px;
+  top: 150px;*/
+
+  width: 140px;
+  height: 140px;
+  background-color: #797D28;
+  background-size: cover;
+  clip-path: polygon(0% 0%, 100% 100%, 100% 0%);
+  position: absolute;
+  left: 80px;
+  top: 160px;
+  transform: rotate(45deg);
+}
+
+#shape4 {
+  width: 0px;
+  height: 0px;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+
+  border-bottom: 100px solid #552AAD;
+  position: absolute;
+  left: 250px;
+  top: 350px;
+}
+
+#shape5 {
+  width: 0;
+  height: 0;
+  border-bottom: 200px solid #693506;
+  border-right: 200px solid transparent;
+  position: absolute;
+  left: 50px;
+  top: 250px;
+}
+
+#shape6 {
+  width: 0;
+  height: 0;
+  border: 100px solid transparent;
+  border-bottom-color: #FE0000;
+  position: absolute;
+  top: -100px;
+  top:  150px;
+  left: 150px;
+}
+
+#shape6:after {
+  content: '';
+  position: absolute;
+  left: -100px;
+  top: 100px;
+  width: 0;
+  height: 0;
+  border: 100px solid transparent;
+  border-top-color: #FE0000;
+}
+
+#shape7 {
+    width: 100px;
+    height: 300px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+
+#top-triangle {
+    width: 0;
+    height: 0;
+    border-bottom: 100px solid #F415C6;
+    border-right: 100px solid transparent;
+}
+#middle-square {
+    width: 100px;
+    height: 100px;
+    background: #F415C6;
+}
+
+#bottom-triangle {
+    width: 0px;
+    height: 0px;
+    border-top: 100px solid #F415C6;
+    border-left: 100px solid transparent;
+}
+
+/* element one page right side */
+.shape1 {
+  width: 0;
+  height: 0;
+  border-top: 200px solid transparent;
+  border-bottom: 200px solid transparent;
+  border-right: 200px solid #D875D2;
+  transform: rotate(-90deg);
+  position: absolute;
+}
