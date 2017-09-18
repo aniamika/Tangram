@@ -1,0 +1,834 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  /*background: #ea9288; /* Old browsers */*/
+  /*background: -moz-linear-gradient(-45deg, #ea9288 0%, #7db9e8 100%); /* FF3.6-15 */*/
+  /*background: -webkit-linear-gradient(-45deg, #ea9288 0%,#7db9e8 100%); /* Chrome10-25,Safari5.1-6 */*/
+  /*background: linear-gradient(135deg, #ea9288 0%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */*/
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea9288', endColorstr='#7db9e8',GradientType=1 ); /* IE6-9 fallback on horizontal gradient*/*/
+}
+
+/* 1 page */
+/* LETS PLAY IMAGE */
+.flexContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  /*border: 2px solid red;*/
+}
+
+.letsPlay {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+  width: 35vw;
+  position: absolute;
+  /*border: 2px solid pink;*/
+}
+
+#lFirstLine {
+  position: relative;
+  /*border: 3px solid lightgreen;*/
+  height: 50%;
+  width: 25%;
+}
+
+#eFirstLine {
+  position: relative;
+  /*border: 3px solid lightgreen;*/
+  height: 50%;
+  width: 25%;
+}
+
+#tFirstLine {
+  position: relative;
+  /*border: 3px solid lightgreen;*/
+  height: 50%;
+  width: 25%;
+}
+
+#sFirstLine {
+  position: relative;
+  /*border: 3px solid lightgreen;*/
+  height: 50%;
+  width: 25%;
+  break-after: always;
+}
+
+.secondLine {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#pSecondLine {
+  position: relative;
+  /*border: 3px solid yellow;*/
+  width: 20%;
+}
+
+#lSecondLine {
+  position: relative;
+  /*border: 3px solid yellow;*/
+  width: 20%;
+}
+
+#aSecondLine {
+  position: relative;
+  /*border: 3px solid yellow;*/
+  width: 20%;
+}
+
+#ySecondLine {
+  position: relative;
+  /*border: 3px solid yellow;*/
+  width: 20%;
+}
+
+#exclamationMarkSecondLine {
+  position: relative;
+  /*border: 3px solid yellow;*/
+  width: 20%;
+}
+
+.square {
+  background: black;
+  /*background: #e8776a; /* Old browsers */*/
+  /*background: -moz-linear-gradient(45deg, #e8776a 0%, #3b9be5 100%); /* FF3.6-15 */*/
+  /*background: -webkit-linear-gradient(45deg, #e8776a 0%,#3b9be5 100%); /* Chrome10-25,Safari5.1-6 */*/
+  /*background: linear-gradient(45deg, #e8776a 0%,#3b9be5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */*/
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8776a', endColorstr='#3b9be5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */*/
+}
+
+.parallelogram {
+  background: black;
+}
+.triangleSmall1 {
+  background: black;
+}
+.triangleSmall2 {
+  background: black;
+}
+.triangleMiddle {
+  background: black;
+}
+.triangleBig1 {
+  background: black;
+
+}
+.triangleBig2 {
+  background: black;
+}
+
+/* L FIRST BLOCKS */
+.lFirst {
+  position: absolute;
+}
+
+.lFirst.square {
+  right: 42px;
+  bottom: 7px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(-45deg);
+  animation: square 0.75s;
+}
+
+.lFirst.parallelogram {
+  right: 17px;
+  bottom: 1px;
+  height: 24px;
+  width: 24px;
+  transform: skew(-45deg);
+  animation: parallelogram 0.5s;
+}
+
+.lFirst.triangleSmall1 {
+  right: 55px;
+  bottom: 1px;
+  height: 16.92px;
+  width: 33.84px;
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 1.5s;
+}
+
+.lFirst.triangleSmall2 {
+  right: -7px;
+  bottom: -2px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(135deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 1s;
+}
+
+.lFirst.triangleMiddle {
+  right: 57px;
+  bottom: 86px;
+  height: 24px;
+  width: 48px;
+  transform: rotate(-45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 1.75s;
+}
+
+.lFirst.triangleBig1 {
+  right: 39px;
+  bottom: 19px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 2s;
+}
+
+.lFirst.triangleBig2 {
+  right: 38px;
+  bottom: 54px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 1.25s;
+}
+
+/* E BLOCKS */
+
+.e {
+  position: absolute;
+}
+
+.e.square {
+  right: 51px;
+  bottom: 36px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(-90deg);
+  animation: square 1s;
+}
+
+.e.parallelogram {
+  right: 32px;
+  bottom: 75px;
+  height: 24px;
+  width: 24px;
+  transform: skew(-45deg);
+  animation: parallelogram 2s;
+}
+
+.e.triangleSmall1 {
+  right: 69px;
+  bottom: 41px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(270deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 0.5s;
+}
+
+.e.triangleSmall2 {
+  right: 8px;
+  bottom: -3px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(135deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall2 1.5s;
+}
+
+.e.triangleMiddle {
+  right: 20px;
+  bottom: 0px;
+  height: 24px;
+  width: 48px;
+  transform: rotate(-180deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleMiddle 0.75s;
+}
+
+.e.triangleBig1 {
+  right: 49px;
+  bottom: -5px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(225deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig1 1.25s;
+}
+
+.e.triangleBig2 {
+  right: 49px;
+  bottom: 70px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig2 1.75s;
+}
+
+/* T BLOCKS */
+.t {
+  position: absolute;
+}
+
+.t.square {
+  right: 50px;
+  bottom: -1px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(-90deg);
+  animation: square 0.75s;
+}
+
+.t.parallelogram {
+  right: 50px;
+  bottom: 40px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(180deg) skew(0deg, 45deg);
+  animation: parallelogram 0.5s;
+  /*transform: skew(45deg, 30deg) rotate(180deg);*/
+  /*clip-path: polygon(0% 0%, 50% 0%, 100% 100%, 50% 100%);*/
+}
+
+.t.triangleSmall1 {
+  right: 39.2px;
+  bottom: 64px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 1.75s;
+}
+
+.t.triangleSmall2 {
+  right: 51px;
+  bottom: 23px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(-135deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall2 1.25s;
+}
+
+.t.triangleMiddle {
+  right: 35px;
+  bottom: 81px;
+  height: 24px;
+  width: 48px;
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleMiddle 1s;
+}
+
+.t.triangleBig1 {
+  right: -12px;
+  bottom: 77px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig1 2s;
+}
+
+.t.triangleBig2 {
+  right: 62px;
+  bottom: 77px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig2 1.5s;
+}
+
+/* S BLOCKS */
+.s {
+  position: absolute;
+}
+
+.s.square {
+  right: 68px;
+  bottom: 5px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(45deg);
+  animation: square 1.25s;
+}
+
+.s.parallelogram {
+  right: 25px;
+  bottom: 29px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(180deg) skew(0deg, 45deg);
+  animation: parallelogram 0.75s;
+}
+
+.s.triangleSmall1 {
+  right: 53px;
+  bottom: -9px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(-90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 1s;
+}
+
+.s.triangleSmall2 {
+  right: 73px;
+  bottom: 27px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall2 0.5s;
+}
+
+.s.triangleMiddle {
+  right: 17px;
+  bottom: 74px;
+  height: 24px;
+  width: 48px;
+  transform: rotate(-135deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleMiddle 1.5s;
+}
+
+.s.triangleBig1 {
+  right: 9px;
+  bottom: -1px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig1 2s;
+}
+
+.s.triangleBig2 {
+  right: 34px;
+  bottom: 60px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig2 1.5s;
+}
+
+/* P BLOCKS */
+.p {
+  position: absolute;
+}
+
+.p.square {
+  right: 22px;
+  bottom: 82px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(0deg);
+  animation: square 0.5s;
+}
+
+.p.parallelogram {
+  right: 34px;
+  bottom: 56px;
+  height: 24px;
+  width: 24px;
+  transform: skew(-45deg);
+  animation: parallelogram 1.75s;
+}
+
+.p.triangleSmall1 {
+  right: 59px;
+  bottom: 29px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(135deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 0.75s;
+}
+
+.p.triangleSmall2 {
+  right: 59px;
+  bottom: 81px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(135deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall2 1s;
+}
+
+.p.triangleMiddle {
+  right: 21px;
+  bottom: 108px;
+  height: 24px;
+  width: 48px;
+  transform: rotate(0deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleMiddle 1.25s;
+}
+
+.p.triangleBig1 {
+  right: 49px;
+  bottom: 52px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig1 2s;
+}
+
+.p.triangleBig2 {
+  right: 50px;
+  bottom: 103px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig2 1.5s;
+}
+
+/* L SECOND BLOCKS */
+.lSecond {
+  position: absolute;
+}
+
+.lSecond.square {
+  right: 41px;
+  bottom: 36px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(-45deg);
+  animation: square 0.75s;
+}
+
+.lSecond.parallelogram {
+  right: 16px;
+  bottom: 30px;
+  height: 24px;
+  width: 24px;
+  transform: skew(-45deg);
+  animation: parallelogram 1.5s;
+  /*transform: rotate(-45deg);*/
+  /*clip-path: polygon(0% 0%, 50% 0%, 100% 100%, 50% 100%);*/
+}
+
+.lSecond.triangleSmall1 {
+  right: 55px;
+  bottom: 30px;
+  height: 16.92px;
+  width: 33.84px;
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 1s;
+}
+
+.lSecond.triangleSmall2 {
+  right: -9px;
+  bottom: 27px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(135deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall2 0.5s;
+}
+
+.lSecond.triangleMiddle {
+  right: 57px;
+  bottom: 118px;
+  height: 24px;
+  width: 48px;
+  transform: rotate(-45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleMiddle 1.75s;
+}
+
+.lSecond.triangleBig1 {
+  right: 39px;
+  bottom: 49px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig1 2s;
+}
+
+.lSecond.triangleBig2 {
+  right: 39px;
+  bottom: 85px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig2 1.25s;
+}
+
+/* A BLOCKS */
+.a {
+  position: absolute;
+}
+
+.a.square {
+  right: 35px;
+  bottom: 69px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(25deg);
+  animation: square 1.5s;
+}
+
+.a.parallelogram {
+  right: 1px;
+  bottom: 57px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(160deg) skew(0deg, 45deg);
+  animation: parallelogram 1.75s;
+}
+
+.a.triangleSmall1 {
+  right: 48px;
+  bottom: 17px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(160deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 2s;
+}
+
+.a.triangleSmall2 {
+  right: -25px;
+  bottom: 18px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(115deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall2 0.5s;
+}
+
+.a.triangleMiddle {
+  right: -19px;
+  bottom: 32px;
+  height: 24px;
+  width: 48px;
+  transform: rotate(70deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleMiddle 1.25s;
+}
+
+.a.triangleBig1 {
+  right: 24px;
+  bottom: 40px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-20deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig1 0.75s;
+}
+
+.a.triangleBig2 {
+  right: 1px;
+  bottom: 88px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-110deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig2 1s;
+}
+
+/* Y BLOCKS */
+.y {
+  position: absolute;
+}
+
+.y.square {
+  right: 31px;
+  bottom: 104px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(-90deg);
+  animation: square 0.75s;
+}
+
+.y.parallelogram {
+  right: -31px;
+  bottom: 103px;
+  height: 24px;
+  width: 24px;
+  transform: skew(-45deg);
+  animation: parallelogram 2s;
+}
+
+.y.triangleSmall1 {
+  right: 46px;
+  bottom: 113px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 1s;
+}
+
+.y.triangleSmall2 {
+  right: 20px;
+  bottom: 87px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall2 1.5s;
+}
+
+.y.triangleMiddle {
+  right: -5px;
+  bottom: 12px;
+  height: 24px;
+  width: 48px;
+  transform: rotate(-135deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleMiddle 1.25s;
+}
+
+.y.triangleBig1 {
+  right: -24px;
+  bottom: 35px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig1 1.75s;
+}
+
+.y.triangleBig2 {
+  right: -17px;
+  bottom: 72px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig2 0.5s;
+}
+
+/* EXCLAMATION MARK BLOCKS */
+
+.exclamationMark {
+  position: absolute;
+}
+
+.exclamationMark.square {
+  right: -14px;
+  bottom: 7px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(-90deg);
+  animation: square 2.5s;
+}
+
+.exclamationMark.parallelogram {
+  right: -23px;
+  bottom: 47px;
+  height: 24px;
+  width: 24px;
+  transform: rotate(225deg) skew(0deg, 45deg);
+  animation: parallelogram 0.75s;
+}
+
+.exclamationMark.triangleSmall1 {
+  right: -18px;
+  bottom: 164px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(0deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall1 2s;
+}
+
+.exclamationMark.triangleSmall2 {
+  right: -10px;
+  bottom: 42px;
+  height: 16.92px;
+  width: 33.84px;
+  transform: rotate(-90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleSmall2 1.25s;
+}
+
+.exclamationMark.triangleMiddle {
+  right: -17px;
+  bottom: 141px;
+  height: 24px;
+  width: 48px;
+  transform: rotate(-45deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleMiddle 1s;
+}
+
+.exclamationMark.triangleBig1 {
+  right: -35px;
+  bottom: 70px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig1 0.5s;
+}
+
+.exclamationMark.triangleBig2 {
+  right: -35px;
+  bottom: 107px;
+  height: 33.84px;
+  width: 67.68px;
+  transform: rotate(-90deg);
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  animation: triangleBig2 1.5s;
+}
+
+@keyframes square {
+  0% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 100; }
+}
+
+@keyframes parallelogram {
+  0% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 100; }
+}
+
+@keyframes triangleSmall1 {
+  0% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 100; }
+}
+
+@keyframes triangleSmall2 {
+  0% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 100; }
+}
+
+@keyframes triangleMiddle {
+  0% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 100; }
+}
+
+@keyframes triangleBig1 {
+  0% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 100; }
+}
+
+@keyframes triangleBig2 {
+  0% { opacity: 0; }
+  99% { opacity: 0; }
+  100% { opacity: 100; }
+}
