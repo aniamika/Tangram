@@ -1,7 +1,7 @@
 $(function() {
 
-  $("body").hide();
-  $("body").fadeIn(1000);
+  // $("body").hide();
+  // $("body").fadeIn(1000);
 
 
 

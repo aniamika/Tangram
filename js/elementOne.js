@@ -1,8 +1,8 @@
 $(function() {
 
 /*** ELEMENT ONE ***/
-$("body").hide();
-$("body").fadeIn(1000);
+// $("body").hide();
+// $("body").fadeIn(1000);
 
 // remove bug - jump problems while dragging elements
 
