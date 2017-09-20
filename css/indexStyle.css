@@ -18,6 +18,8 @@ html {
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: -40px;
+    margin-left: -34px;
   /*border: 2px solid red;*/
 }
 
