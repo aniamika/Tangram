@@ -41,7 +41,6 @@ $(function() {
   };
 
   $('.flexContainer').on('click','.rotate:not(.ui-dragable-dragging)',function() {
-    console.log('rotate');
     rotateElem(this);
   });
 
@@ -197,7 +196,7 @@ $(function() {
       // accept: '#triangleSmall1',
       scope: "triangleSmall",
       drop: function (event, ui) {
-        if( rotation1 == 135 | degree == 135) {
+        if( rotation1 == 135 | degree == 120) {
         console.log('dobra rotacja')
         $(this).html(ui.draggable.remove().html());
         $(this).css("background-color", "black")
@@ -229,7 +228,7 @@ $(function() {
     // accept: '#triangleSmall2',
     scope: "triangleSmall",
     drop: function (event, ui) {
-      if( rotation1 == 0 | degree == 0) {
+      if( rotation1 == 0 | degree == 345) {
       console.log('dobra rotacja')
       $(this).html(ui.draggable.remove().html());
       $(this).css("background-color", "black")
@@ -293,7 +292,7 @@ $(function() {
     accept: '#triangleMiddle',
     scope: "triangleMiddle",
     drop: function (event, ui) {
-      if( rotation1 == 0 | degree == 0) {
+      if( rotation1 == 0 | rotation1 == 180 | degree == 165 | degree == 354) {
       console.log('dobra rotacja')
       $(this).html(ui.draggable.remove().html());
       $(this).css("background-color", "black")
@@ -383,7 +382,7 @@ $('#triangleBig1Right').droppable({
   hoverClass: 'active',
   scope: "triangleBig",
   drop: function (event, ui) {
-    if( rotation1 == 90 | degree == 90) {
+    if( rotation1 == 90 | degree == 75) {
     console.log('dobra rotacja')
     $(this).html(ui.draggable.remove().html());
     $(this).css("background-color", "black")
@@ -414,7 +413,7 @@ $('#triangleBig2Right').droppable({
   hoverClass: 'active',
   scope: "triangleBig",
   drop: function (event, ui) {
-    if( rotation1 == 45 | degree == 45) {
+    if( rotation1 == 45 | degree == 30) {
     console.log('dobra rotacja')
     $(this).html(ui.draggable.remove().html());
     $(this).css("background-color", "black")

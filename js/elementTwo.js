@@ -107,7 +107,7 @@ $(function() {
     accept: '#square',
     scope: "square",
     drop: function (event, ui) {
-      if( rotation1 == 0 | rotation1 == 90 | rotation1 == 180 | rotation1 == 270 | degree == 165 | degree == 75 | degree == 255 | degree == 345) {
+      if( rotation1 == 75 | rotation1 == 165 | rotation1 == 255 | rotation1 == 345 | degree == 60| degree == 150 | degree == 240 | degree == 330 ) {
       console.log('dobra rotacja')
       $(this).html(ui.draggable.remove().html());
       $(this).css("background-color", "black")
@@ -197,7 +197,7 @@ $(function() {
       // accept: '#triangleSmall1',
       scope: "triangleSmall",
       drop: function (event, ui) {
-        if( rotation1 == 135 | degree == 135) {
+        if( rotation1 == 225 | degree == 210 ) {
         console.log('dobra rotacja')
         $(this).html(ui.draggable.remove().html());
         $(this).css("background-color", "black")
@@ -229,7 +229,7 @@ $(function() {
     // accept: '#triangleSmall2',
     scope: "triangleSmall",
     drop: function (event, ui) {
-      if( rotation1 == 0 | degree == 0) {
+      if( rotation1 == 45 | degree == 30 ) {
       console.log('dobra rotacja')
       $(this).html(ui.draggable.remove().html());
       $(this).css("background-color", "black")
@@ -293,7 +293,7 @@ $(function() {
     accept: '#triangleMiddle',
     scope: "triangleMiddle",
     drop: function (event, ui) {
-      if( rotation1 == 0 | degree == 0) {
+      if( rotation1 == 225 | degree == 210 ) {
       console.log('dobra rotacja')
       $(this).html(ui.draggable.remove().html());
       $(this).css("background-color", "black")
@@ -383,7 +383,7 @@ $('#triangleBig1Right').droppable({
   hoverClass: 'active',
   scope: "triangleBig",
   drop: function (event, ui) {
-    if( rotation1 == 90 | degree == 90) {
+    if( rotation1 == 225 | degree == 210 ) {
     console.log('dobra rotacja')
     $(this).html(ui.draggable.remove().html());
     $(this).css("background-color", "black")
@@ -477,7 +477,7 @@ $(function() {
     accept: '#parallelogram',
     scope: "parallelogram",
     drop: function (event, ui) {
-      if( rotation1 == 135 | rotation1 == 315 | degree == 120 | degree == 300 ) {
+      if( rotation1 == 180 | rotation1 == 0 | degree == 165 | degree == 345 ) {
       console.log('dobra rotacja')
       $(this).html(ui.draggable.remove().html());
       $(this).css("background-color", "black")
