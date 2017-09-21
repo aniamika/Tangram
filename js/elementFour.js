@@ -22,9 +22,9 @@ $(function() {
 
 // rotate elements
   // draw degree of left elements (every 15 degrees)
-  var degree = (Math.floor(Math.random()*24)* 15);
+  // var degree = (Math.floor(Math.random()*24)* 15);
+  var degree = 0;
   $('.selectable').each(function(){
-      console.log(degree)
       $(this).data('rotate', degree);
       rotateElem(this);
       $(this).show();
@@ -229,7 +229,7 @@ $(function() {
     // accept: '#triangleSmall2',
     scope: "triangleSmall",
     drop: function (event, ui) {
-      if( rotation1 == 90 | degree == 75 ) {
+      if( rotation1 == 90 | degree == 165 ) {
       console.log('dobra rotacja')
       $(this).html(ui.draggable.remove().html());
       $(this).css("background-color", "black")
@@ -505,8 +505,6 @@ $(function() {
 });
 
 
-
-  // zakonczenie funkcji jest tu bo inaczej nie moge uzyc zmiennej rotation w if
   console.log(rotation1)
   }
 });
