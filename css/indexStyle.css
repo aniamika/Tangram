@@ -100,11 +100,6 @@ html {
 
 .square {
   background: black;
-  /*background: #e8776a; /* Old browsers */*/
-  /*background: -moz-linear-gradient(45deg, #e8776a 0%, #3b9be5 100%); /* FF3.6-15 */*/
-  /*background: -webkit-linear-gradient(45deg, #e8776a 0%,#3b9be5 100%); /* Chrome10-25,Safari5.1-6 */*/
-  /*background: linear-gradient(45deg, #e8776a 0%,#3b9be5 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */*/
-  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8776a', endColorstr='#3b9be5',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */*/
 }
 
 .parallelogram {

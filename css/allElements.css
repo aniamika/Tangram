@@ -21,7 +21,6 @@ html {
 .imgDiv {
   width: 150px;
   max-height: 150px;
-  border:1px solid red;
   margin: 10px;
 }
 

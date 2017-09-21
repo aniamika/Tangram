@@ -131,18 +131,16 @@ body, html {
 
 #triangleBig1Right {
   top: 308px;
-  left: 740px;
+  left: 789px;
   height: 193px;
   width: 193px;
-  transform: skewX(27deg);
-  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
 }
 
 #triangleBig2Right {
   top: 308px;
-  left: 644.5px;
+  left: 601.5px;
   height: 193px;
-  width: 193px;
-  transform: skewX(-26deg);
-  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  width: 188px;
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%)
 }

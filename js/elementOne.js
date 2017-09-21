@@ -1,11 +1,8 @@
 $(function() {
 
 /*** ELEMENT ONE ***/
-// $("body").hide();
-// $("body").fadeIn(1000);
 
 // remove bug - jump problems while dragging elements
-
   // backup original handler
   var _mouseStart = $.ui.draggable.prototype._mouseStart;
   $.ui.draggable.prototype._mouseStart = function(event) {
@@ -24,7 +21,6 @@ $(function() {
   // draw degree of left elements (every 15 degrees)
   var degree = (Math.floor(Math.random()*24)* 15);
   $('.selectable').each(function(){
-      console.log(degree)
       $(this).data('rotate', degree);
       rotateElem(this);
       $(this).show();
@@ -50,7 +46,7 @@ var score = 0;
 
 
   function rotateElem(elem){
-    var rotation1 = $(elem).data('rotate');
+    rotation1 = $(elem).data('rotate');
     rotation1 += 15;
     // jesli dojdzie do 360stopni to zresetuj
     if(rotation1 == 360) {
@@ -58,9 +54,9 @@ var score = 0;
     }
     $(elem).data('rotate',rotation1);
     Rotate(elem,rotation1);
-    // // takie jak ponizej powinno byc zakonczenie funkcji ale musialam przeneisc je dalej bo nie moglam uzyc rotation
-    // console.log(rotation1)
-    // }
+    console.log(rotation1 + " - rotation1")
+    }
+
 
 
 /*** SQUARE ***/
@@ -505,7 +501,4 @@ $(function() {
 
 
 
-  // zakonczenie funkcji jest tu bo inaczej nie moge uzyc zmiennej rotation w if
-  console.log(rotation1)
-  }
 });

@@ -141,8 +141,8 @@ body, html {
 
 #triangleBig2Right {
   top: 357px;
-  left: 297.5px;
-  height: 211px;
-  width: 340px;
-  clip-path: polygon(19% 1%, 59% 65%, 100% 0%);
+  left: 360.5px;
+  height: 136.68px;
+  width: 277px;
+  clip-path: polygon(100% 0, 0 0, 50% 100%);
 }
