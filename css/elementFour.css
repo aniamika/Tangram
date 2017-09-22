@@ -74,12 +74,11 @@ body, html {
 
 #triangleBig2 {
   top: 121px;
-  left: 545px;
+  left: 544px;
   height: 135.36px;
   width: 270.72px;
   clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
 }
-
 
 /*** RIGHT ***/
 .destination {
@@ -119,31 +118,31 @@ body, html {
   left: 288px;
   height: 137.68px;
   width: 156.36px;
-  transform: skewY(45deg);
+  transform: skewY(44.5deg);
   clip-path: polygon(45% -4%, 0% -45%, -1% 100%);
 }
 
 #triangleMiddleRight {
-  top: 355px;
+  top: 353px;
   left: 287.5px;
   height: 190px;
   width: 128px;
-  transform: skewX(-17.4deg) skewY(3deg);
-  clip-path: polygon(0% 50%, 99% 100%, 50% 0%);
+  transform: skewX(-18.1deg) skewY(2deg);
+  clip-path: polygon(0% 51.7%, 99% 100%, 50% 0%);
 }
 
 #triangleBig1Right {
-  top: 355px;
-  left: 381px;
+  top: 353px;
+  left: 382px;
   height: 193px;
   width: 193px;
   clip-path: polygon(0% 100%, 100% 100%, 0% 0%);
 }
 
 #triangleBig2Right {
-  top: 356px;
-  left: 379px;
+  top: 354px;
+  left: 382px;
   height: 140.68px;
   width: 276px;
-  clip-path: polygon(98% 0, 0 0, 52% 100%);
+  clip-path: polygon(98% 0, 0 0, 51% 100%);
 }
