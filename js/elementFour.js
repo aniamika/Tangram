@@ -59,7 +59,7 @@ $(function() {
   function win() {
     if(score >= 7) {
      $("body").fadeOut(1000,function(){
-        window.location.href = '../html/allElements.html';
+        window.location.href = 'allElements.html';
      })
     }
   }
