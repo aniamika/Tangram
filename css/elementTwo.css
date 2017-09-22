@@ -26,15 +26,15 @@ body, html {
 }
 
 #square {
-  top: 344px;
-  left: 80px;
+  top: 421px;
+  left: 444px;
   height: 96px;
   width: 96px;
 }
 
 #parallelogram {
-  top: 413px;
-  left: 508px;
+  top: 233px;
+  left: 133px;
   height: 206px;
   width: 68px;
   clip-path: polygon(0 0, 100% 33%, 100% 100%, 0 67%);
