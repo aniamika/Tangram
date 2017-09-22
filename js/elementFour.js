@@ -1,6 +1,6 @@
 $(function() {
 
-/*** ELEMENT ONE ***/
+/*** ELEMENT FOUR ***/
 
 // remove bug - jump problems while dragging elements
   // backup original handler

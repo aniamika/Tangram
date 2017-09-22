@@ -1,6 +1,6 @@
 $(function() {
 
-/*** ELEMENT ONE ***/
+/*** ELEMENT TWO ***/
 
 // remove bug - jump problems while dragging elements
   // backup original handler
@@ -86,12 +86,12 @@ $(function() {
     drop: function (event, ui) {
       if( rotation == 75 | rotation == 165 | rotation == 255 | rotation == 345 ) {
         score = score + 1
-        console.log('square rotated right')
+        // console.log('square rotated right')
         console.log('score: ' + score)
         $(this).html(ui.draggable.remove().html());
         $(this).css("background-color", "black")
       } else {
-        console.log('square rotated wrong')
+        // console.log('square rotated wrong')
       }
       // if win go to page with another shapes to choose
       win()
