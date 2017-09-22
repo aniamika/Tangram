@@ -17,15 +17,17 @@ $(function() {
 };
 
 
-// rotate elements
+// ROTATE ELEMENTS //
+
   // draw degree of left elements (every 15 degrees)
   var degree = (Math.floor(Math.random()*24)* 15);
   $('.selectable').each(function(){
-      $(this).data('rotate', degree);
-      rotateElem(this);
-      $(this).show();
+    $(this).data('rotate', degree);
+    rotateElem(this);
+    $(this).show();
   })
   console.log(degree + " this is Match.random degree")
+
   // Rotate on init
   function Rotate(elem, degrees) {
     $(elem).css({
@@ -44,155 +46,95 @@ $(function() {
 // variable for the scores ( score 1 is 1 properly fit element, 7 or more than 7 finished )
 var score = 0;
 
-
   function rotateElem(elem){
-    rotation1 = $(elem).data('rotate');
-    rotation1 += 15;
+    rotation = $(elem).data('rotate');
+    rotation += 15;
     // jesli dojdzie do 360stopni to zresetuj
-    if(rotation1 == 360) {
-      rotation1 = 0;
+    if(rotation == 360) {
+      rotation = 0;
     }
-    $(elem).data('rotate',rotation1);
-    Rotate(elem,rotation1);
-    console.log(rotation1 + " - rotation1")
-    }
+    $(elem).data('rotate',rotation);
+    Rotate(elem,rotation);
+    console.log(rotation + " - rotation")
+  }
 
 
 
 /*** SQUARE ***/
-$(function() {
-    // draggable square //
+    // draggable square
     $("#square").draggable({
+      // po puszczeniu kursora element wraca na swoje miejsce
       revert: true,
       scope: "square",
       //okresla miejsca w jakim moze sie poruszac dany ksztalt - zeby nie dalo sie go przesuwac dalej niz w obrebie rodzica, czyli flexContainera - limit the movement only to flexContainer
       containment: '.flexContainer',
       // lapka zamiast strzałki na kursorze podczas przesuwania
       cursor: 'move',
-      // po puszczeniu kursora element wraca na swoje miejsce
-      // revert: true
-      // jak przesuwamy element to jquery draggable nadaje mu klase ui-dragable-dragging
-      // what is the position of the element?:
-      create: eventHandler1,
-      // start is fired when whe user drag the element
-      start: eventHandler2,
-      drag: eventHandler3,
-      stop: eventHandler4
+      // // jak przesuwamy element to jquery draggable nadaje mu klase ui-dragable-dragging
+      // // what is the position of the element?:
+      // create: eventHandler1,
+      // // start is fired when whe user drag the element
+      // start: eventHandler2,
+      // drag: eventHandler3,
+      // stop: eventHandler4
     });
-    // ui - represented drag element
-    function eventHandler1(event, ui) {
-      console.log('element created!')
-    }
-    function eventHandler2(event, ui) {
-      console.log('user start dragging the element!')
-    }
-    function eventHandler3(event, ui) {
-      // offset relative to the document
-      let offsetLeft = parseInt(ui.offset.left);
-      let offsetTop = parseInt(ui.offset.top);
-      console.log(':::left position: ' + offsetLeft + ' :::top position: ' + offsetTop)
-    }
-    function eventHandler4(event, ui) {
-      console.log('stopped');
-    }
+    // // ui - represented drag element
+    // function eventHandler1(event, ui) {
+    //   console.log('element created!')
+    // }
+    // function eventHandler2(event, ui) {
+    //   console.log('user start dragging the element!')
+    // }
+    // function eventHandler3(event, ui) {
+    //   // offset relative to the document
+    //   let offsetLeft = parseInt(ui.offset.left);
+    //   let offsetTop = parseInt(ui.offset.top);
+    //   console.log(':::left position: ' + offsetLeft + ' :::top position: ' + offsetTop)
+    // }
+    // function eventHandler4(event, ui) {
+    //   console.log('stopped');
+    // }
 
-  // droppable square //
+  // droppable square
   $('#squareRight').droppable({
     hoverClass: 'active',
-    accept: '#square',
     scope: "square",
     drop: function (event, ui) {
-      if( rotation1 == 0 | rotation1 == 90 | rotation1 == 180 | rotation1 == 270 | degree == 165 | degree == 75 | degree == 255 | degree == 345) {
-      console.log('dobra rotacja')
-      $(this).html(ui.draggable.remove().html());
-      $(this).css("background-color", "black")
+      if( rotation == 0 | rotation == 90 | rotation == 180 | rotation == 270) {
+        score = score + 1
+        console.log('dobra rotacja')
+        console.log('score: ' + score)
+        $(this).html(ui.draggable.remove().html());
+        $(this).css("background-color", "black")
       } else {
       console.log('zla rotacja')
       }
-
-      // check if square was fit properly (if it is remove from the DOM)
-      if($('#square').length !== 1) {
-        score = score + 1
-      }
-      console.log("score is " + score)
-
-      // go to page with another shapes to choose
-      if(score >= 7) {
-        $(function(){
-           $("body").fadeOut(1000,function(){
-              window.location.href = 'allElements.html';
-           })
-         });
-        }
       }
     });
-});
 
 
 /*** TRIANGLE SMALL1 & TRIANGLE SMALL2 ***/
-$(function() {
-    // draggable triangleSmall1 //
+    // draggable triangleSmall1
     $("#triangleSmall1").draggable({
       revert: true,
       scope: "triangleSmall",
       containment: '.flexContainer',
       cursor: 'move',
-      create: eventHandler1,
-      start: eventHandler2,
-      drag: eventHandler3,
-      stop: eventHandler4
     });
-    // ui - represented drag element
-    function eventHandler1(event, ui) {
-      console.log('element created!')
-    }
-    function eventHandler2(event, ui) {
-      console.log('user start dragging the element!')
-    }
-    function eventHandler3(event, ui) {
-      // offset relative to the document
-      let offsetLeft = parseInt(ui.offset.left);
-      let offsetTop = parseInt(ui.offset.top);
-      console.log(':::left position: ' + offsetLeft + ' :::top position: ' + offsetTop)
-    }
-    function eventHandler4(event, ui) {
-      console.log('stopped');
-    }
 
       $("#triangleSmall2").draggable({
         revert: true,
         scope: "triangleSmall",
         containment: '.flexContainer',
         cursor: 'move',
-        create: eventHandler1,
-        start: eventHandler2,
-        drag: eventHandler3,
-        stop: eventHandler4
       });
-      // ui - represented drag element
-      function eventHandler1(event, ui) {
-        console.log('element created!')
-      }
-      function eventHandler2(event, ui) {
-        console.log('user start dragging the element!')
-      }
-      function eventHandler3(event, ui) {
-        // offset relative to the document
-        let offsetLeft = parseInt(ui.offset.left);
-        let offsetTop = parseInt(ui.offset.top);
-        console.log(':::left position: ' + offsetLeft + ' :::top position: ' + offsetTop)
-      }
-      function eventHandler4(event, ui) {
-        console.log('stopped');
-      }
 
-    // droppable triangleSmall1 //
+    // droppable triangleSmall1
     $('#triangleSmall1Right').droppable({
       hoverClass: 'active',
-      // accept: '#triangleSmall1',
       scope: "triangleSmall",
       drop: function (event, ui) {
-        if( rotation1 == 135 | degree == 120) {
+        if( rotation == 135 ) {
         console.log('dobra rotacja')
         $(this).html(ui.draggable.remove().html());
         $(this).css("background-color", "black")
@@ -221,10 +163,9 @@ $(function() {
   // droppable triangleSmall2 //
   $('#triangleSmall2Right').droppable({
     hoverClass: 'active',
-    // accept: '#triangleSmall2',
     scope: "triangleSmall",
     drop: function (event, ui) {
-      if( rotation1 == 0 | degree == 345) {
+      if( rotation == 0 ) {
       console.log('dobra rotacja')
       $(this).html(ui.draggable.remove().html());
       $(this).css("background-color", "black")
@@ -238,267 +179,150 @@ $(function() {
       }
       console.log("score is " + score)
 
-      // go to page with another shapes to choose
-      if(score >= 7) {
-        $(function(){
-           $("body").fadeOut(1000,function(){
-              window.location.href = 'allElements.html';
-           })
-        });
-      }
+      // // go to page with another shapes to choose
+      // if(score >= 7) {
+      //   $(function(){
+      //      $("body").fadeOut(1000,function(){
+      //         window.location.href = 'allElements.html';
+      //      })
+      //   });
+      // }
 
     }
   });
-});
 
 
 /*** TRIANGLE MIDDLE ***/
-$(function() {
-    // draggable elements //
+
+    // draggable triangleMiddle
     $("#triangleMiddle").draggable({
       revert: true,
       scope: "triangleMiddle",
       containment: '.flexContainer',
       cursor: 'move',
-      create: eventHandler1,
-      start: eventHandler2,
-      drag: eventHandler3,
-      stop: eventHandler4
     });
-    // ui - represented drag element
-    function eventHandler1(event, ui) {
-      console.log('element created!')
-    }
-    function eventHandler2(event, ui) {
-      console.log('user start dragging the element!')
-    }
-    function eventHandler3(event, ui) {
-      // offset relative to the document
-      let offsetLeft = parseInt(ui.offset.left);
-      let offsetTop = parseInt(ui.offset.top);
-      console.log(':::left position: ' + offsetLeft + ' :::top position: ' + offsetTop)
-    }
-    function eventHandler4(event, ui) {
-      console.log('stopped');
-    }
 
-  // droppable elements //
+  // droppable triangleMiddle
   $('#triangleMiddleRight').droppable({
-    // hoverClass: 'active',
-    accept: '#triangleMiddle',
+    hoverClass: 'active',
     scope: "triangleMiddle",
     drop: function (event, ui) {
-      if( rotation1 == 0 | rotation1 == 180 | degree == 165 | degree == 354) {
-      console.log('dobra rotacja')
-      $(this).html(ui.draggable.remove().html());
-      $(this).css("background-color", "black")
+      // check if triangleMiddle was fit properly (if it is remove from the DOM)
+      if( rotation == 0 | rotation == 180 ) {
+        score = score + 1
+        console.log('dobra rotacja')
+        console.log('score: ' + score)
+        $(this).html(ui.draggable.remove().html());
+        $(this).css("background-color", "black")
+      } else {
+        console.log('zla rotacja')
+      }
+      // // go to page with another shapes to choose
+      // if(score >= 7) {
+      //   $(function(){
+      //      $("body").fadeOut(1000,function(){
+      //         window.location.href = 'allElements.html';
+      //      })
+      //   });
+      // }
+
+    }
+  });
+
+/*** TRIANGLE BIG1 & BIG2 ***/
+
+// draggable triangleBig1
+  $("#triangleBig1").draggable({
+    revert: true,
+    scope: "triangleBig1",
+    scope: "triangleBig2",
+    containment: '.flexContainer',
+    cursor: 'move',
+  });
+
+// draggable triangleBig2
+  $("#triangleBig2").draggable({
+    revert: true,
+    scope: "triangleBig1",
+    scope: "triangleBig2",
+    containment: '.flexContainer',
+    cursor: 'move',
+  });
+
+// droppable triangleBig1
+    $('#triangleBig1Right').droppable({
+      hoverClass: 'active',
+      scope: "triangleBig1",
+      scope: "triangleBig2",
+      drop: function (event, ui) {
+        if( rotation == 90 ) {
+          score = score + 1
+          console.log('dobra rotacja')
+          console.log('score: ' + score)
+          $(this).html(ui.draggable.remove().html());
+          $(this).css("background-color", "black")
+        } else {
+          console.log('zla rotacja')
+        }
+      }
+      });
+
+// droppable triangleBig2
+  $('#triangleBig2Right').droppable({
+    hoverClass: 'active',
+    scope: "triangleBig1",
+    scope: "triangleBig2",
+    drop: function (event, ui) {
+      if( rotation == 45 ) {
+        score = score + 1
+        console.log('dobra rotacja')
+        console.log('score: ' + score)
+        $(this).html(ui.draggable.remove().html());
+        $(this).css("background-color", "black")
       } else {
       console.log('zla rotacja')
       }
-
-      // check if triangleMiddle was fit properly (if it is remove from the DOM)
-      if($('#triangleMiddle').length !== 1) {
-        score = score + 1
-      }
-      console.log("score " + score)
-
-      // go to page with another shapes to choose
-      if(score >= 7) {
-        $(function(){
-           $("body").fadeOut(1000,function(){
-              window.location.href = 'allElements.html';
-           })
-        });
-      }
-
-    }
+    },
   });
-});
-
-/*** TRIANGLE BIG1 & BIG2 ***/
-$(function() {
-  // draggable triangleBig1 i triangleBig2 //
-  $("#triangleBig1").draggable({
-    revert: true,
-    scope: "triangleBig",
-    containment: '.flexContainer',
-    cursor: 'move',
-    create: eventHandler1,
-    start: eventHandler2,
-    drag: eventHandler3,
-    stop: eventHandler4
-  });
-  // ui - represented drag element
-  function eventHandler1(event, ui) {
-    console.log('element created!')
-  }
-  function eventHandler2(event, ui) {
-    console.log('user start dragging the element!')
-  }
-  function eventHandler3(event, ui) {
-    // offset relative to the document
-    let offsetLeft = parseInt(ui.offset.left);
-    let offsetTop = parseInt(ui.offset.top);
-    console.log(':::left position: ' + offsetLeft + ' :::top position: ' + offsetTop)
-  }
-  function eventHandler4(event, ui) {
-    console.log('stopped');
-  }
-
-  $("#triangleBig2").draggable({
-    revert: true,
-    scope: "triangleBig",
-    containment: '.flexContainer',
-    cursor: 'move',
-    create: eventHandler1,
-    start: eventHandler2,
-    drag: eventHandler3,
-    stop: eventHandler4
-  });
-  // ui - represented drag element
-  function eventHandler1(event, ui) {
-    console.log('element created!')
-  }
-  function eventHandler2(event, ui) {
-    console.log('user start dragging the element!')
-  }
-  function eventHandler3(event, ui) {
-    // offset relative to the document
-    let offsetLeft = parseInt(ui.offset.left);
-    let offsetTop = parseInt(ui.offset.top);
-    console.log(':::left position: ' + offsetLeft + ' :::top position: ' + offsetTop)
-  }
-  function eventHandler4(event, ui) {
-    console.log('stopped');
-  }
-
-
-// droppable triangleBig //
-$('#triangleBig1Right').droppable({
-  hoverClass: 'active',
-  scope: "triangleBig",
-  drop: function (event, ui) {
-    if( rotation1 == 90 | degree == 75) {
-    console.log('dobra rotacja')
-    $(this).html(ui.draggable.remove().html());
-    $(this).css("background-color", "black")
-    } else {
-    console.log('zla rotacja')
-    }
-
-    // check if triangleBig1 or triangleBig2 was fit properly (if it is remove from the DOM)
-    if($('#triangleBig1').length !== 1 | $('#triangleBig2').length !== 1) {
-      score = score + 1
-    }
-    console.log("score is " + score)
-
-    // go to page with another shapes to choose
-    if(score >= 7) {
-      $(function(){
-         $("body").fadeOut(1000,function(){
-            window.location.href = 'allElements.html';
-         })
-      });
-    }
-
-  },
-});
-
-// droppable triangleBig //
-$('#triangleBig2Right').droppable({
-  hoverClass: 'active',
-  scope: "triangleBig",
-  drop: function (event, ui) {
-    if( rotation1 == 45 | degree == 30) {
-    console.log('dobra rotacja')
-    $(this).html(ui.draggable.remove().html());
-    $(this).css("background-color", "black")
-    } else {
-    console.log('zla rotacja')
-    }
-
-    // check if triangleBig1 or triangleBig2 was fit properly (if it is remove from the DOM)
-    if($('#triangleBig1').length !== 1 | $('#triangleBig2').length !== 1) {
-      score = score + 1
-    }
-    console.log("score is " + score)
-
-    // go to page with another shapes to choose
-    if(score >= 7) {
-      $(function(){
-         $("body").fadeOut(1000,function(){
-            window.location.href = 'allElements.html';
-         })
-      });
-    }
-
-  },
-});
-});
 
 
 /*** PARALLELOGRAM ***/
-$(function() {
-    // draggable parallelogram //
+
+// draggable parallelogram
     $("#parallelogram").draggable({
       revert: true,
       scope: "parallelogram",
       containment: '.flexContainer',
       cursor: 'move',
-      create: eventHandler1,
-      start: eventHandler2,
-      drag: eventHandler3,
-      stop: eventHandler4
     });
-    // ui - represented drag element
-    function eventHandler1(event, ui) {
-      console.log('element created!')
-    }
-    function eventHandler2(event, ui) {
-      console.log('user start dragging the element!')
-    }
-    function eventHandler3(event, ui) {
-      // offset relative to the document
-      let offsetLeft = parseInt(ui.offset.left);
-      let offsetTop = parseInt(ui.offset.top);
-      console.log(':::left position: ' + offsetLeft + ' :::top position: ' + offsetTop)
-    }
-    function eventHandler4(event, ui) {
-      console.log('stopped');
-    }
 
-  // droppable parallelogram //
+// droppable parallelogram
   $('#parallelogramRight').droppable({
-    accept: '#parallelogram',
+    hoverClass: 'active',
     scope: "parallelogram",
     drop: function (event, ui) {
-      if( rotation1 == 135 | rotation1 == 315 | degree == 120 | degree == 300 ) {
-      console.log('dobra rotacja')
-      $(this).html(ui.draggable.remove().html());
-      $(this).css("background-color", "black")
-      } else {
-      console.log('zla rotacja')
-      }
-
       // check if parallelogram was fit properly (if it is remove from the DOM)
-      if($('#parallelogram').length !== 1) {
+      if( rotation == 135 | rotation == 315 ) {
         score = score + 1
+        console.log('dobra rotacja')
+        console.log('score: ' + score)
+        $(this).html(ui.draggable.remove().html());
+        $(this).css("background-color", "black")
+      } else {
+        console.log('zla rotacja')
       }
-      console.log("score is " + score)
-
-      // go to page with another shapes to choose
-      if(score >= 7) {
-        $(function(){
-           $("body").fadeOut(1000,function(){
-              window.location.href = 'allElements.html';
-           })
-        });
-      }
-
-    },
+    }
   });
-});
 
+
+// go to page with another shapes to choose
+if(score >= 7) {
+  $(function(){
+     $("body").fadeOut(1000,function(){
+        window.location.href = 'allElements.html';
+     })
+  });
+}
 
 
 });
