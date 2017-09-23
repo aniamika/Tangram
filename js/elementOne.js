@@ -160,12 +160,14 @@ $(function() {
     drop: function (event, ui) {
       if( rotation == 135 ) {
         score = score + 1
-        // console.log('triangleSmall rotation right')
+        // console.log('triangleSmall rotation right');
         console.log('score: ' + score)
         $(this).html(ui.draggable.remove().html());
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "black");
+        // if you match element properly to triangleSmall1Right - disable from dropping
+        $('#triangleSmall1Right').droppable( "option", "disabled", true );
       } else {
-        // console.log('triangleSmall rotation wrong')
+        // console.log('triangleSmall rotation wrong');
       }
       // if win go to page with another shapes to choose
       win()
@@ -180,12 +182,14 @@ $(function() {
     drop: function (event, ui) {
       if( rotation == 0 ) {
         score = score + 1
-        // console.log('triangleSmall rotation right')
+        // console.log('triangleSmall rotation right');
         console.log('score: ' + score)
         $(this).html(ui.draggable.remove().html());
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "black");
+        // if you match element properly to triangleSmall2Right - disable from dropping
+        $('#triangleSmall2Right').droppable( "option", "disabled", true );
       } else {
-        // console.log(('triangleSmall rotation wrong')
+        // console.log('triangleSmall rotation wrong');
       }
       // if win go to page with another shapes to choose
       win()
@@ -257,7 +261,9 @@ $(function() {
         // console.log('triangleBig rotation right')
         console.log('score: ' + score)
         $(this).html(ui.draggable.remove().html());
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "black");
+        // if you match element properly to triangleBig1Right - disable from dropping
+        $('#triangleBig1Right').droppable( "option", "disabled", true );
       } else {
         // console.log('triangleBig rotation wrong')
       }
@@ -277,7 +283,9 @@ $(function() {
         // console.log('triangleBig rotation right')
         console.log('score: ' + score)
         $(this).html(ui.draggable.remove().html());
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "black");
+        // if you match element properly to triangleBig2Right - disable from dropping
+        $('#triangleBig2Right').droppable( "option", "disabled", true );
       } else {
         // console.log('triangleBig rotation wrong')
       }

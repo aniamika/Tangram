@@ -1,6 +1,6 @@
 $(function() {
 
-/*** ELEMENT SIX***/
+/*** ELEMENT SIX ***/
 
 // remove bug - jump problems while dragging elements
   // backup original handler
@@ -163,7 +163,9 @@ $(function() {
         // console.log('triangleSmall rotation right')
         console.log('score: ' + score)
         $(this).html(ui.draggable.remove().html());
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "black");
+        // if you match element properly to triangleSmall1Right - disable from dropping
+        $('#triangleSmall1Right').droppable( "option", "disabled", true );
       } else {
         // console.log('triangleSmall rotation wrong')
       }
@@ -183,7 +185,9 @@ $(function() {
         // console.log('triangleSmall rotation right')
         console.log('score: ' + score)
         $(this).html(ui.draggable.remove().html());
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "black");
+        // if you match element properly to triangleSmall2Right - disable from dropping
+        $('#triangleSmall2Right').droppable( "option", "disabled", true );
       } else {
         // console.log(('triangleSmall rotation wrong')
       }
@@ -257,7 +261,9 @@ $(function() {
         // console.log('triangleBig rotation right')
         console.log('score: ' + score)
         $(this).html(ui.draggable.remove().html());
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "black");
+        // if you match element properly to triangleBig1Right - disable from dropping
+        $('#triangleBig1Right').droppable( "option", "disabled", true );
       } else {
         // console.log('triangleBig rotation wrong')
       }
@@ -277,7 +283,9 @@ $(function() {
         // console.log('triangleBig rotation right')
         console.log('score: ' + score)
         $(this).html(ui.draggable.remove().html());
-        $(this).css("background-color", "black")
+        $(this).css("background-color", "black");
+        // if you match element properly to triangleBig2Right - disable from dropping
+        $('#triangleBig2Right').droppable( "option", "disabled", true );
       } else {
         // console.log('triangleBig rotation wrong')
       }
