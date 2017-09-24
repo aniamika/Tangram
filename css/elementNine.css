@@ -89,63 +89,62 @@ body, html {
 }
 
 #squareRight{
-  top: 35px;
-  left: 172px;
-  height: 96px;
-  width: 96px;
-  transform: skewY(-14deg) skewX(14deg);
+  top: 13px;
+  left: 182px;
+  height: 136px;
+  width: 68px;
+  transform: skewY(-45deg) skewX(26.5deg);
 }
 
 #parallelogramRight {
-  top: 395px;
-  left: 341px;
+  top: 433px;
+  left: 343px;
   height: 190px;
-  width: 125px;
-  clip-path: polygon(30% 44%, 48% 0%, 98% 56%, 80% 100%);
+  width: 129px;
+  clip-path: polygon(33% 46%, 33% 0%, 106% 49%, 115% 100%);
   transform: scale(1.17);
 }
 
 #triangleSmall1Right {
-  top: 559px;
-  left: 181px;
-  height: 96px;
-  width: 96px;
-  transform: skewX(28deg) skewY(2deg);
-  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  top: 629px;
+  left: 482px;
+  height: 137.68px;
+  width: 156.36px;
+  transform: skewY(44.5deg);
+  clip-path: polygon(45% -4%, 0% -45%, -1% 100%);
 }
 
 #triangleSmall2Right {
-  top: 559px;
-  left: 410px;
+  top: 586px;
+  left: 241px;
   height: 96px;
-  width: 96px;
-  transform: skewY(45deg) skewX(-27deg);
+  width: 94.36px;
+  transform: skewX(-26.1deg);
   clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
 }
 
 #triangleMiddleRight {
-  top: 416px;
-  left: 209px;
-  height: 132px;
-  width: 135px;
-  transform: skewX(28deg);
-  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  top: 394px;
+  left: 263px;
+  height: 195.36px;
+  width: 97px;
+  transform: skewY(-44.4deg) skewX(13.5deg);
+  clip-path: polygon(1% 100%, 100% 100%, 47% 1%);
 }
 
 #triangleBig1Right {
-  top: 71px;
-  left: 858px;
-  height: 189.36px;
-  width: 188.72px;
-  transform: skewX(27deg);
-  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
+  top: 250px;
+  left: 247px;
+  height: 270px;
+  width: 136px;
+  clip-path: polygon(0% 49.5%, 100% 100%, 100% 0%);
 }
 
 #triangleBig2Right {
-  top: 77px;
-  left: 211px;
-  height: 271.36px;
-  width: 140.72px;
-  transform: skewY(-45deg) skewX(14deg);
+  top: 85px;
+  left: 215px;
+  height: 265.36px;
+  width: 134.72px;
+  transform: skewY(-44.4deg) skewX(14deg);
   clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
 }
