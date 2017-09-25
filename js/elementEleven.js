@@ -1,6 +1,6 @@
 $(function() {
 
-/*** ELEMENT TEN ***/
+/*** ELEMENT ELEVEN ***/
 
 // remove bug - jump problems while dragging elements
   // backup original handler
@@ -18,7 +18,7 @@ $(function() {
 
 
 // ROTATE ELEMENTS
-  var degree = 135;
+  var degree = 240;
 
   $('.selectable').each(function(){
     $(this).data('rotate', degree);
@@ -84,7 +84,7 @@ $(function() {
     hoverClass: 'active',
     scope: "square",
     drop: function (event, ui) {
-      if( rotation == 45 | rotation == 135 | rotation == 225 | rotation == 315 ) {
+      if( rotation == 0 | rotation == 90 | rotation == 180 | rotation == 270 ) {
         score = score + 1
         // console.log('square rotated right')
         console.log('score: ' + score)
@@ -116,7 +116,7 @@ $(function() {
     scope: "parallelogram",
     drop: function (event, ui) {
       // check if parallelogram was fit properly (if it is remove from the DOM)
-      if( rotation == 120 | rotation == 300 ) {
+      if( rotation == 30 | rotation == 210 ) {
         score = score + 1
         // console.log('parallelogram rotated right')
         console.log('score: ' + score)
@@ -158,7 +158,7 @@ $(function() {
     scope: "triangleSmall1",
     scope: "triangleSmall2",
     drop: function (event, ui) {
-      if( rotation == 135 ) {
+      if( rotation == 150 ) {
         score = score + 1
         // console.log('triangleSmall rotation right')
         console.log('score: ' + score)
@@ -214,7 +214,7 @@ $(function() {
     scope: "triangleMiddle",
     drop: function (event, ui) {
       // check if triangleMiddle was fit properly (if it is remove from the DOM)
-      if( rotation == 180 ) {
+      if( rotation == 315 ) {
         score = score + 1
         // console.log('triangleMiddle rotation right')
         console.log('score: ' + score)
@@ -278,7 +278,7 @@ $(function() {
     scope: "triangleBig1",
     scope: "triangleBig2",
     drop: function (event, ui) {
-      if( rotation == 135 ) {
+      if( rotation == 330 ) {
         score = score + 1
         // console.log('triangleBig rotation right')
         console.log('score: ' + score)

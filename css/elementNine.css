@@ -106,12 +106,12 @@ body, html {
 }
 
 #triangleSmall1Right {
-  top: 629px;
-  left: 482px;
-  height: 137.68px;
-  width: 156.36px;
-  transform: skewY(44.5deg);
-  clip-path: polygon(45% -4%, 0% -45%, -1% 100%);
+  top: 537px;
+  left: 440px;
+  height: 138px;
+  width: 110.36px;
+  transform: skewY(-7deg) skewY(-42deg);
+  clip-path: polygon(39% 108%, 100% 100%, 38% 0%);
 }
 
 #triangleSmall2Right {

@@ -148,7 +148,7 @@ $(function() {
     revert: true,
     scope: "triangleSmall1",
     scope: "triangleSmall2",
-    containment: '.flexContainer',
+    // containment: '.flexContainer',
     cursor: 'move',
   });
 
