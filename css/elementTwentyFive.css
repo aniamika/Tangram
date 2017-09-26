@@ -26,31 +26,31 @@ body, html {
 }
 
 #square {
-  top: 436px;
-  left: 326px;
+  top: 501px;
+  left: 500px;
   height: 96px;
   width: 96px;
 }
 
 #parallelogram {
-  top: 413px;
-  left: 892px;
-  height: 103px;
-  width: 204px;
+  top: 502px;
+  left: 796px;
+  height: 96px;
+  width: 198px;
   clip-path: polygon(0% 100%, 50% 0%, 100% 0%, 50% 100%);
 }
 
 #triangleSmall1 {
-  top: 359px;
-  left: 1038px;
+  top: 222px;
+  left: 138px;
   height: 67.68px;
   width: 135.36px;
   clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
 }
 
 #triangleSmall2 {
-  top: 150px;
-  left: 835px;
+  top: 114px;
+  left: 902px;
   height: 67.68px;
   width: 135.36px;
   clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
@@ -65,16 +65,16 @@ body, html {
 }
 
 #triangleBig1 {
-  top: 66px;
-  left: 956px;
+  top: 313px;
+  left: 932px;
   height: 135.36px;
   width: 270.72px;
   clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
 }
 
 #triangleBig2 {
-  top: 107px;
-  left: 145px;
+  top: 106px;
+  left: 309px;
   height: 135.36px;
   width: 270.72px;
   clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
@@ -88,57 +88,56 @@ body, html {
 }
 
 #squareRight{
-  top: 94px;
-  left: 561px;
-  height: 132px;
-  width: 132px;
-  clip-path: polygon(0% 64%, 64% 100%, 100% 37%, 37% 0%);
+  top: 482px;
+  left: 262px;
+  height: 96px;
+  width: 96px;
 }
 
 #parallelogramRight {
-  top: 415px;
-  left: 580px;
-  height: 103px;
-  width: 204px;
+  top: 386px;
+  left: 260px;
+  height: 96px;
+  width: 198px;
   clip-path: polygon(0% 100%, 50% 0%, 100% 0%, 50% 100%);
 }
 
 #triangleSmall1Right {
-  top: 394px;
-  left: 520px;
-  height: 96px;
-  width: 96px;
-  clip-path: polygon(0% 100%, 100% 0%, 0% 0%);
+  top: 179px;
+  left: 811px;
+  height: 137px;
+  width: 69px;
+  clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
 }
 
 #triangleSmall2Right {
-  top: 518px;
-  left: 532px;
+  top: 386px;
+  left: 458px;
   height: 96px;
   width: 96px;
-  clip-path: polygon(0% 100%, 100% 0%, 0% 0%);
+  clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
 }
 
 #triangleMiddleRight {
-  top: 88px;
-  left: 646px;
-  height: 138px;
-  width: 138px;
-  clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+  top: 289px;
+  left: 458px;
+  height: 97px;
+  width: 193px;
+  clip-path: polygon(0% 100%, 100% 100%, 50% 0%);
 }
 
 #triangleBig1Right {
-  top: 225px;
-  left: 594px;
-  height: 190px;
-  width: 190px;
-  clip-path: polygon(0% 100%, 100% 100%, 100% 0%);
+  top: 179px;
+  left: 744px;
+  height: 192px;
+  width: 192px;
+  clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
 }
 
 #triangleBig2Right {
-  top: 226px;
-  left: 507px;
-  height: 139px;
-  width: 276px;
-  clip-path: polygon(101% 0, 0 0, 50% 100%);
+  top: 289px;
+  left: 553px;
+  height: 192px;
+  width: 192px;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
 }

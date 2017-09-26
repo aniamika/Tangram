@@ -84,7 +84,7 @@ $(function() {
     hoverClass: 'active',
     scope: "square",
     drop: function (event, ui) {
-      if( rotation == 0 | rotation == 90 | rotation == 180 | rotation == 270 ) {
+      if( rotation == 45 | rotation == 135 | rotation == 225 | rotation == 315 ) {
         score = score + 1
         // console.log('square rotated right')
         console.log('score: ' + score)
@@ -116,7 +116,7 @@ $(function() {
     scope: "parallelogram",
     drop: function (event, ui) {
       // check if parallelogram was fit properly (if it is remove from the DOM)
-      if( rotation == 120 | rotation == 300 ) {
+      if( rotation == 45 | rotation == 225 ) {
         score = score + 1
         // console.log('parallelogram rotated right')
         console.log('score: ' + score)
@@ -158,7 +158,7 @@ $(function() {
     scope: "triangleSmall1",
     scope: "triangleSmall2",
     drop: function (event, ui) {
-      if( rotation == 45 ) {
+      if( rotation == 315 ) {
         score = score + 1
         // console.log('triangleSmall rotation right')
         console.log('score: ' + score)
@@ -180,7 +180,7 @@ $(function() {
     scope: "triangleSmall1",
     scope: "triangleSmall2",
     drop: function (event, ui) {
-      if( rotation == 225 ) {
+      if( rotation == 135 ) {
         score = score + 1
         // console.log('triangleSmall rotation right')
         console.log('score: ' + score)

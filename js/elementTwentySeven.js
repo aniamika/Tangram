@@ -116,7 +116,7 @@ $(function() {
     scope: "parallelogram",
     drop: function (event, ui) {
       // check if parallelogram was fit properly (if it is remove from the DOM)
-      if( rotation == 120 | rotation == 300 ) {
+      if( rotation == 90 | rotation == 270 ) {
         score = score + 1
         // console.log('parallelogram rotated right')
         console.log('score: ' + score)
@@ -158,7 +158,7 @@ $(function() {
     scope: "triangleSmall1",
     scope: "triangleSmall2",
     drop: function (event, ui) {
-      if( rotation == 45 ) {
+      if( rotation == 180 ) {
         score = score + 1
         // console.log('triangleSmall rotation right')
         console.log('score: ' + score)
@@ -256,7 +256,7 @@ $(function() {
     scope: "triangleBig1",
     scope: "triangleBig2",
     drop: function (event, ui) {
-      if( rotation == 225 ) {
+      if( rotation == 0 ) {
         score = score + 1
         // console.log('triangleBig rotation right')
         console.log('score: ' + score)
@@ -278,7 +278,7 @@ $(function() {
     scope: "triangleBig1",
     scope: "triangleBig2",
     drop: function (event, ui) {
-      if( rotation == 45 ) {
+      if( rotation == 180 ) {
         score = score + 1
         // console.log('triangleBig rotation right')
         console.log('score: ' + score)
