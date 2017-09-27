@@ -39,7 +39,8 @@ $(function() {
   $('.flexContainer').on('click','.rotate:not(.ui-dragable-dragging)',function() {
     rotateElem(this);
   });
-
+  
+  // right rotation
   function rotateElem(elem){
     rotation = $(elem).data('rotate');
     rotation += 15;
@@ -51,6 +52,31 @@ $(function() {
     Rotate(elem,rotation);
     // console.log(rotation + " - rotation")
     }
+
+  // left rotation
+  function rotateElemLeft(elem){
+    rotation = $(elem).data('rotate');
+    rotation -= 15;
+    // if the rotation is equall to 360degrees, reset(change to 0)
+    if(rotation == 360) {
+      rotation = 0;
+    }
+    $(elem).data('rotate',rotation);
+    Rotate(elem,rotation);
+    // console.log(rotation + " - rotation")
+    }
+
+  // rotate on right and left arrow keys
+  $(document).keyup(function(e) {
+    let selectableElements =  $('.rotate:not(.ui-dragable-dragging)');
+      if (e.which === 39) {
+        rotateElem(selectableElements);
+        // console.log('right arrow');
+      } else if (e.which === 37) {
+        rotateElemLeft(selectableElements);
+        // console.log('left arrow');
+      }
+  });
 
 // IF YOU WIN - GO TO PAGE WITH ALL ELEMENTS
   // variable for the scores ( score 1 is 1 properly fit element, 7 or more than 7 finished )
